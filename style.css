@@ -398,4 +398,20 @@ ul {
     .hero-buttons {
         flex-direction: column;
     }
+
+    /* Mobile Nav Improvements */
+    .logo {
+        font-size: 1rem;
+        gap: 0.5rem;
+        max-width: 70%;
+        /* Prevent overlap with burger */
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
 }
