@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Process | Craik & Comfort</title>
+  <meta name="description"
+    content="Discover our journey from design consultation to premium manufacturing and installation. Experience the Craik & Comfort difference.">
+  <meta property="og:image" content="hero_luxury_bathroom.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:image" content="hero_luxury_bathroom.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .page-header {
+      padding-top: 120px;
+      padding-bottom: 60px;
+      background-color: var(--surface-color);
+      text-align: center;
+    }
+
+    .timeline-section {
+      position: relative;
+      padding: 6rem 0;
+      overflow: hidden;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--accent-gold), transparent);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 6rem;
+      position: relative;
+    }
+
+    .timeline-content {
+      width: 40%;
+      padding: 2rem;
+      background: var(--surface-color);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .timeline-content:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-5px);
+    }
+
+    .timeline-number {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      color: rgba(212, 175, 55, 0.1);
+      line-height: 1;
+    }
+
+    .timeline-icon {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      background: var(--bg-color);
+      border: 1px solid var(--accent-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      z-index: 2;
+      transition: opacity 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-icon {
+      opacity: 0.3;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-item:nth-child(even) .timeline-number {
+      right: auto;
+      left: -20px;
+    }
+
+    .craftsmanship-hero {
+      height: 60vh;
+      background-image: url('craftsmanship_detail.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .craftsmanship-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 17, 21, 0.7);
+    }
+
+    .craftsmanship-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 800px;
+      padding: 0 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-line {
+        left: 20px;
+      }
+
+      .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 50px;
+      }
+
+      .timeline-item:nth-child(even) {
+        flex-direction: column;
+      }
+
+      .timeline-content {
+        width: 100%;
+      }
+
+      .timeline-icon {
+        left: 20px;
+        transform: translateX(-50%);
+        opacity: 0.3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Craik & Comfort Logo">
+        Craik & Comfort
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="process.html" class="active" style="color: var(--accent-gold);">Process</a></li>
+        <li><a href="arrangements.html">Arrangements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <span class="overline">How We Work</span>
+      <h1>From Vision to Reality</h1>
+      <p>A seamless journey to your perfect space.</p>
+    </div>
+  </header>
+
+  <section class="timeline-section">
+    <div class="timeline-line"></div>
+    <div class="container">
+      <!-- Step 1 -->
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-icon"><i data-lucide="pen-tool"></i></div>
+        <div class="timeline-content">
+          <span class="timeline-number">01</span>
+          <h3>Design Consultation</h3>
+          <p>It starts with a conversation. Our experts listen to your needs, style preferences, and functional
+            requirements to create a bespoke design plan tailored just for you.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-icon"><i data-lucide="layers"></i></div>
+        <div class="timeline-content">
+          <span class="timeline-number">02</span>
+          <h3>Material Selection</h3>
+          <p>Choose from our Euro Premium range. We guide you through our selection of high-grade sanitary composites,
+            mineral casts, and finishes to ensure durability and elegance.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-icon"><i data-lucide="hammer"></i></div>
+        <div class="timeline-content">
+          <span class="timeline-number">03</span>
+          <h3>Precision Manufacturing</h3>
+          <p>Using state-of-the-art thermoforming technology, our Polish craftsmen bring the design to life. Every curve
+            and edge is perfected to meet our rigorous quality standards.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-icon"><i data-lucide="check-circle"></i></div>
+        <div class="timeline-content">
+          <span class="timeline-number">04</span>
+          <h3>Delivery & Guarantee</h3>
+          <p>We deliver directly to your door with our comprehensive service guarantee. Your satisfaction is paramount,
+            backed by our long-term warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="craftsmanship-hero">
+    <div class="craftsmanship-overlay"></div>
+    <div class="craftsmanship-content">
+      <span class="overline">Our Heritage</span>
+      <h2>100% Polish Craftsmanship</h2>
+      <p>We combine traditional attention to detail with modern innovation. Our commitment to quality is unwavering,
+        ensuring that every piece we create is a masterpiece.</p>
+      <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Start Your Journey</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Craik & Comfort</h4>
+        <p>Improving lives through disruptive, premium products.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="arrangements.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@craikcomfort.ie">info@craikcomfort.ie</a></li>
+          <li><a href="tel:+15555555556">+1 555-555-5556</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2024 Craik & Comfort Co. Limited. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
