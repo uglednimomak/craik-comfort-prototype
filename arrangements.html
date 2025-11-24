@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrangements | Craik & Comfort</title>
+  <meta name="description"
+    content="Explore our luxury bathroom, living room, and bedroom arrangements. Inspiration for your next design project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .page-header {
+      padding-top: 120px;
+      padding-bottom: 60px;
+      background-color: var(--surface-color);
+      text-align: center;
+    }
+
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-secondary);
+      padding: 0.5rem 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--font-body);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: var(--surface-color);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .gallery-overlay h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .gallery-overlay p {
+      font-size: 0.9rem;
+      color: var(--accent-gold);
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Craik & Comfort Logo">
+        Craik & Comfort
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">Why Us</a></li>
+        <li><a href="arrangements.html" class="active" style="color: var(--accent-gold);">Arrangements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <span class="overline">Portfolio</span>
+      <h1>Our Arrangements</h1>
+      <p>Discover our curated collection of luxury interiors.</p>
+    </div>
+  </header>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="bathroom">Bathrooms</button>
+        <button class="filter-btn" data-filter="living">Living Rooms</button>
+        <button class="filter-btn" data-filter="bedroom">Bedrooms</button>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Bathrooms -->
+        <div class="gallery-item" data-category="bathroom">
+          <img src="arrangement_bathroom.png" alt="Luxury Spa Bathroom">
+          <div class="gallery-overlay">
+            <h3>Noir Sanctuary</h3>
+            <p>Bathroom Collection</p>
+          </div>
+        </div>
+
+        <!-- Living Rooms -->
+        <div class="gallery-item" data-category="living">
+          <img src="arrangement_living_room.png" alt="Modern Luxury Living Room">
+          <div class="gallery-overlay">
+            <h3>Midnight Lounge</h3>
+            <p>Living Room Collection</p>
+          </div>
+        </div>
+
+        <!-- Bedrooms -->
+        <div class="gallery-item" data-category="bedroom">
+          <img src="arrangement_bedroom.png" alt="Master Bedroom Suite">
+          <div class="gallery-overlay">
+            <h3>Royal Slumber</h3>
+            <p>Bedroom Collection</p>
+          </div>
+        </div>
+
+        <!-- Duplicating items to simulate a fuller gallery for demo purposes -->
+        <div class="gallery-item" data-category="bathroom">
+          <img src="hero_luxury_bathroom.png" alt="Marble Bathroom">
+          <div class="gallery-overlay">
+            <h3>Marble & Gold</h3>
+            <p>Bathroom Collection</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="living">
+          <img src="hero_luxury_living_room.png" alt="Elegant Living Space">
+          <div class="gallery-overlay">
+            <h3>Velvet Elegance</h3>
+            <p>Living Room Collection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta section-padding">
+    <div class="container cta-container">
+      <h2>Inspired by what you see?</h2>
+      <p>Let's discuss how we can bring this level of luxury to your home.</p>
+      <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Craik & Comfort</h4>
+        <p>Improving lives through disruptive, premium products.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="arrangements.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@craikcomfort.ie">info@craikcomfort.ie</a></li>
+          <li><a href="tel:+15555555556">+1 555-555-5556</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2024 Craik & Comfort Co. Limited. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // Simple Filter Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+              item.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

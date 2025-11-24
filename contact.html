@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Craik & Comfort</title>
+  <meta name="description"
+    content="Get in touch with Craik & Comfort for a free design consultation. We are here to help you transform your space.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Specific styles for contact page */
+    .page-header {
+      padding-top: 120px;
+      padding-bottom: 60px;
+      background-color: var(--surface-color);
+      text-align: center;
+    }
+
+    .contact-section {
+      padding: 4rem 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      flex-shrink: 0;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 1rem;
+      background: var(--bg-color);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+    }
+
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Craik & Comfort Logo">
+        Craik & Comfort
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">Why Us</a></li>
+        <li><a href="arrangements.html">Arrangements</a></li>
+        <li><a href="contact.html" class="active" style="color: var(--accent-gold);">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <span class="overline">Get In Touch</span>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Let's start a conversation.</p>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          <p style="margin-bottom: 2rem;">Ready to start your project? Contact us for a free consultation or visit our
+            showroom.</p>
+
+          <div class="contact-info-item">
+            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+            <div>
+              <h3>Our Location</h3>
+              <p>123 Luxury Lane, Design District<br>Dublin, Ireland</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon"><i data-lucide="phone"></i></div>
+            <div>
+              <h3>Phone</h3>
+              <p><a href="tel:+15555555556">+1 555-555-5556</a></p>
+              <p>Mon-Fri: 9am - 6pm</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:info@craikcomfort.ie">info@craikcomfort.ie</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <h2>Send us a Message</h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select class="form-control">
+                <option>General Inquiry</option>
+                <option>Design Consultation</option>
+                <option>Product Support</option>
+                <option>Warranty Claim</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Craik & Comfort</h4>
+        <p>Improving lives through disruptive, premium products.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#arrangements">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@craikcomfort.ie">info@craikcomfort.ie</a></li>
+          <li><a href="tel:+15555555556">+1 555-555-5556</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2024 Craik & Comfort Co. Limited. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
